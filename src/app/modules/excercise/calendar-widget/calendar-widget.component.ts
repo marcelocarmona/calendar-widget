@@ -294,7 +294,7 @@ export class CalendarWidgetComponent implements OnInit {
   /**
    * Create a new event
    */
-  addEvent(event: MouseEvent) {
+  addEvent(event?: MouseEvent) {
     const lastId = this.events.length;
     // create a event clicking the event container
     if (event) {
