@@ -1,0 +1,39 @@
+@import "../_vars";
+
+.container {
+  padding: 10px 0;
+  display: flex;
+  height: 720px;
+
+  .hours {
+    width: 100px;
+    position: relative;
+
+    .hour {
+      position: absolute;
+      right: 10px;
+
+      .secundary {
+        font-size: 0.7em;
+        color: $text-secundary;
+        padding-left: 5px;
+      }
+    }
+  }
+  .events-container {
+    background-color: $gray-tertiary;
+    width: 580px;
+    position: relative;
+    padding: 0 10px;
+    cursor: copy;
+    .events {
+      position: relative;
+    }
+  }
+}
+
+.calendar-form {
+  padding: 20px;
+  border: 1px solid $gray-tertiary;
+  font-size: small;
+}

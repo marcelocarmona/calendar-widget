@@ -1,0 +1,22 @@
+@import "../../_vars";
+
+:host {
+  display: block;
+  padding: 5px;
+  width: 100%;
+  border: 1px solid $gray-primary;
+  background: $backgound;
+  border-left: 5px solid $color-primary;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: absolute;
+
+  .title {
+    color: $color-primary;
+  }
+
+  .location {
+    font-size: 0.7em;
+    color: $text-secundary;
+  }
+}

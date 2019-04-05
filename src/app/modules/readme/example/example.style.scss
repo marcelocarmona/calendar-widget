@@ -1,0 +1,17 @@
+.image-container {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	overflow: scroll;
+
+	&.flexStart {
+		align-items: flex-start;
+	}
+
+	img {
+		width: calc(100% - 100px);
+		height: auto;
+	}
+}

@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="hours">
+    <div
+      *ngFor="let hoursLabel of hoursLabels; let i = index; let odd = odd"
+      class="hour"
+      [ngStyle]="{ top: i * 30 - 10 + 'px' }"
+    >
+      <span [ngClass]="{ secundary: odd }">{{ hoursLabel.hour }}</span>
+      <span *ngIf="!odd" class="secundary">{{ hoursLabel.period }}</span>
+    </div>
+  </div>
+  <div class="events-container" (click)="addEvent($event)" #eventContainer>
+    <div class="events">
+      <event *ngFor="let event of eventsWithPosition" [event]="event"></event>
+    </div>
+  </div>
+</div>
+
+<div class="calendar-form">
+  <div>
+    <label
+      >Start
+      <input
+        type="number"
+        min="0"
+        max="720"
+        name="start"
+        required
+        [(ngModel)]="tempEvent.start"
+    /></label>
+    <label
+      >End
+      <input
+        type="number"
+        min="0"
+        max="720"
+        name="end"
+        required
+        [(ngModel)]="tempEvent.end"
+    /></label>
+    <button (click)="addEvent()">add</button>
+  </div>
+  <button (click)="deleteLastEvent()">delete last event</button>
+</div>
+
+<h5>Events</h5>
+<pre>{{ JSON.stringify(events, null, 2) }}</pre>
